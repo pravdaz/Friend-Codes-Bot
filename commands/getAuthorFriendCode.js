@@ -5,12 +5,13 @@ const getAuthorFriendCode = async (msg, db) => {
   });
   // If user exists send their friend code
   if (friendcode) {
-    msg.channel.send(`${msg.author.username}'s friend code is:`);
-    return msg.channel.send(
-      `${friendcode.get("pogocode").split(" ").join("")}`
-    );
+    msg.channel.send(`${friendcode.get("pogocode").split(" ").join("")}`);
+//    msg.channel.send(`Le code ami de ${msg.author.username} est:`);
+//    return msg.channel.send(
+//      `${friendcode.get("pogocode").split(" ").join("")}`
+//    );
   } else {
-    return msg.reply(`Could not find friend code for ${msg.author.username}`);
+    return msg.reply(`Je ne trouve pas de code ami pour ${msg.author.username}`);
   }
 };
 
