@@ -1,3 +1,6 @@
+# CHANGES
+I simply adapted it in french, and deleted initial post from commands add and remove
+
 # FriendCodes Bot
 
 FriendCodes Bot stores your Pokemon Go friend code for easy sharing across Discord.
