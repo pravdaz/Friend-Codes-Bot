@@ -11,15 +11,15 @@ const updateFriendCode = async (friendcode, msg, db) => {
     regex.exec(friendcode) === null ||
     friendcode.length < 12
   ) {
-    return msg.reply(`Invalid friend code ${friendcode}`);
+    return msg.reply(`Code ami invalide ${friendcode}`);
   }
   if (affectedRows > 0) {
     return msg.reply(
-      `Your friend code was updated to ${friendcode.split(" ").join("")}.`
+      `Votre code ami a été mis à jour avec ${friendcode.split(" ").join("")}.`
     );
   }
   return msg.reply(
-    `Could not find a friend code for username ${msg.author.username}.`
+    `Je ne trouve pas de code ami pour ${msg.author.username}.`
   );
 };
 
