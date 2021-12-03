@@ -1,5 +1,12 @@
 # CHANGES
-I simply adapted it in french, and deleted initial post from commands add and remove
+I simply adapted it in french, and deleted unuseful initial posts from commands : add and remove
+
+### Commandes en français:
+- `.ajoutcode [VOTRE_CODE_ICI]` ajouter son code au bot.
+- `.moncode` son propre code. --> message raccourci au code
+- `.supprcode` supprimer son code du bot.
+- `.nouveaucode [NEW_CODE_HERE]` modifier son code.
+- `.code @mention` retrouver le code d'un utilisateur du Discord.
 
 # FriendCodes Bot
 
