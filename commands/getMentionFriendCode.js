@@ -9,17 +9,17 @@ const getMentionFriendCode = async (user, msg) => {
 
     if (!user) {
       return msg.reply(
-        "Please use a proper mention if you want to see someone else's friend code."
+        "L'utilisateur n'existe pas, ou la mention est mal rentrée..."
       );
     }
     // If user exists send their friend code
     if (friendcode) {
       let pogocode = friendcode.get("pogocode").split(" ").join("");
-      msg.channel.send(`${user.username}'s friend code:`);
+      msg.channel.send(`Code ami :`);
       return msg.channel.send(`${pogocode}`);
     } else {
       return msg.channel.send(
-        `Could not find a friend code for ${user.username}`
+        `Je ne trouve pas de code ami pour ${user.username}`
       );
     }
   }
