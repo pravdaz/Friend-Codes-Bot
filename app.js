@@ -37,31 +37,25 @@ client.on("message", async (msg) => {
   const command = args.shift();
 
   // Add friend code
-  if (command.toLowerCase() === "addcode") {
+  if (command.toLowerCase() === ".ajoutcode") {
     addFriendCode(args.join(""), msg, db);
   }
   // Get friend code
-  if (command.toLowerCase() === "mycode") {
+  if (command.toLowerCase() === ".moncode") {
     getAuthorFriendCode(msg, db);
   }
   // Update friend code
-  if (command.toLowerCase() === "newcode") {
+  if (command.toLowerCase() === ".nouveaucode") {
     updateFriendCode(args.join(""), msg, db);
   }
   // Delete friend code
-  if (command.toLowerCase() === "delcode") {
+  if (command.toLowerCase() === ".supprcode") {
     deleteFriendCode(msg, db);
   }
   // Get mentioned user's friend code
-  if (command.toLowerCase() === "fc") {
+  if (command.toLowerCase() === ".code") {
     const user = getUserFromMention(args[0]);
     getMentionFriendCode(user, msg, db);
-  }
-  // Send bot invite link
-  if (command.toLowerCase() === "linkme") {
-    msg.channel.send(
-      `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&permissions=8&scope=bot`
-    );
   }
 });
 client.login(BOT_TOKEN);
