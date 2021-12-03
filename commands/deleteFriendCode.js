@@ -3,8 +3,13 @@ const deleteFriendCode = async (msg, db) => {
     where: { username: `${msg.author.username}` },
   });
 
-  if (!rowCount) return msg.reply("That friend code does not exist.");
+  // Delete a message
+    msg.delete()
+    .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+    .catch(console.error);
+  
+  if (!rowCount) return msg.reply("Ce code ami n'existe pas");
 
-  return msg.reply("Friend code deleted.");
+  return msg.reply("Code ami supprimé.");
 };
 module.exports = deleteFriendCode;
